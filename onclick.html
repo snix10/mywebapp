@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>bobbyhadz.com</title>
+  </head>
+
+  <body>
+    <div id="box">Some text here</div>
+    <button id="btn">Button</button>
+
+    <script src="index.js"></script>
+
+    <h1>Change background-color with JavaScript</h1>
+
+<p>Click the "Try it" button to set the background-color property of the DIV element to "lightblue":</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <h1>Hello</h1>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.backgroundColor = "lightblue";
+}
+</script>
+
+<script>const btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function onClick(event) {
+      // 👇️ change background color
+      document.body.style.backgroundColor = 'salmon';
+    
+      // 👇️ optionally change text color
+      // document.body.style.color = 'white';
+    });
+    </script>
+  </body>
+
+ 
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEB</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: whitesmoke;">
+
+    <ul id="header" class="nav justify-content-center bg-transparent  fixed-top">
+
+        <li class="nav-item nav-color rounded-end rounded-pill border-0">
+            <a class="nav-link active " aria-current="page" href="#"> <i class="fas fa-home icon"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home"></i></a>
+        </li>
+        <li class="nav-item nav-color border-0">
+            <a class="nav-link" href="#"><i class="fas fa-home icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="About"></i></a>
+        </li>
+        <li class="nav-item nav-color border-0">
+            <a class="nav-link " href="#"><i class="fas fa-home icon" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" title="Conttac"></i></a>
+        </li>
+        <li class="nav-item nav-color rounded-start rounded-pill border-0">
+            <a class="nav-link "><i class="fas fa-home icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Tema"></i></a>
+
+        </li>
+
+    </ul>
+
+    <div class="row g-0 bg-transparent position-relative">
+        <div class="col-md-6 mb-md-6 ps-md-4 my-3">
+                <h1 class="mx-5">
+                    <p class="color-black">Your Text <span class="typed-text"></span><span class="cursor"> </span></p>
+                </h1>
+                <h3 class="mx-5 color-black">Another instance of placeholder content for this other custom component. It is intended to
+                    mimic what
+                    some real-world content would look like, and we're using it here to give the component a bit of body
+                    and
+                    size.</h3>
+                <!-- <a href="#" class="stretched-link mx-5">Go somewhere</a> -->
+        </div>
+
+        <!-- <div class="col-md-6 p-4 ps-md-0 ">                                                                                                                                                                                                                                        
+            <div class="d-flex justify-content-center">
+                <img src="asset/myPicture.png" class="" alt="..."
+                    style="height: 200px; width: 200px; border-radius: 100%;">
+            </div>
+        </div> -->
+
+        
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script>
+
+        // text mengetik
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        const textArray = ["code snippets", "plugins", "scripts", "tutorials"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000; // Delay between current and next text
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            }
+            else {
+                cursorSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            }
+            else {
+                cursorSpan.classList.remove("typing");
+                textArrayIndex++;
+                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 1100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+    
+
+        // navbar
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").classList.remove('show');
+            }
+            else {
+                document.getElementById("header").classList.add('show');
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
