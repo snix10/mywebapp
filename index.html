@@ -10,61 +10,270 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: whitesmoke;">
+<body>
 
-    <ul id="header" class="nav justify-content-center bg-transparent  fixed-top">
+    <!-- NAVBAR -->
+    <ul id="header" class="nav justify-content-center bg-transparent  fixed-top ">
+        <div id="navstyle" class="d-flex border-2 rounded-pill navbg mt-1">
 
-        <li class="nav-item nav-color rounded-end rounded-pill border-0">
-            <a class="nav-link active " aria-current="page" href="#"> <i class="fas fa-home icon"
-                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home"></i></a>
-        </li>
-        <li class="nav-item nav-color border-0">
-            <a class="nav-link" href="#"><i class="fas fa-home icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                    title="About"></i></a>
-        </li>
-        <li class="nav-item nav-color border-0">
-            <a class="nav-link " href="#"><i class="fas fa-home icon" data-bs-toggle="tooltip"
-                    data-bs-placement="bottom" title="Conttac"></i></a>
-        </li>
-        <li class="nav-item nav-color rounded-start rounded-pill border-0">
-            <a class="nav-link "><i class="fas fa-home icon" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                    title="Tema"></i></a>
+            <img onclick="changeTheme('temaspace')" src="asset/icon_astronaut.png" alt="" class="mx-2 zoom"
+                style="height: 47px;">
+            <img onclick="changeTheme('temahalloween')" src="asset/icon_halloween.png" alt="" class="mx-2 zoom"
+                style="height: 47px;">
+            <img onclick="changeTheme('temapixel')" src="asset/icon_pixel_game.png" alt="" class="mx-2 zoom"
+                style="height: 47px;">
+            <img onclick="changeTheme('temablackwhite')" src="asset/icon_sayap.png" alt="" class="mx-2 zoom"
+                style="height: 47px;">
 
-        </li>
-
+        </div>
     </ul>
 
-    <div class="row g-0 bg-transparent position-relative">
-        <div class="col-md-6 mb-md-6 ps-md-4 my-3">
-                <h1 class="mx-5">
-                    <p class="color-black">Your Text <span class="typed-text"></span><span class="cursor"> </span></p>
+
+    <!-- HERO SECTION -->
+    <div class="container">
+        <div class="row g-0 bg-transparent position-relative">
+            <div class="col-md-6 mb-md-6 ps-md-4 my-3 ">
+
+                <h1 class="mx-5 mt-5">
+                    <p class="color-black display-3">I'M <span class="typed-text"></span><span class="cursor"> </span>
+                    </p>
                 </h1>
-                <h3 class="mx-5 color-black">Another instance of placeholder content for this other custom component. It is intended to
-                    mimic what
-                    some real-world content would look like, and we're using it here to give the component a bit of body
-                    and
-                    size.</h3>
-                <!-- <a href="#" class="stretched-link mx-5">Go somewhere</a> -->
+                <h5 class="mx-5  color-black">Halo! Saya Saepulloh, seorang pengembang full stack dengan keahlian
+                    dalam membangun aplikasi web yang dinamis dan responsif. Dengan pengalaman di sisi depan (frontend)
+                    dan sisi belakang (backend), serta pengetahuan dalam basis data. Jika Anda tertarik untuk
+                    berkolaborasi atau memiliki pertanyaan lebih lanjut, jangan ragu untuk menghubungi saya.
+
+                </h5>
+                <div class="d-flex my-3 mx-4">
+                    <div class="mx-3   text-center">
+                        <a class="nav-link" href="https://github.com/snix10"> <i
+                                class="fab fa-github fa-2xl ms-2"></i></a>
+                    </div>
+                    <div class="mx-3 text-center">
+                        <a class="nav-link" href="https://github.com/snix10"> <i
+                                class="fab fa-github fa-2xl ms-2"></i></a>
+                    </div>
+                    <div class="mx-3 text-center">
+                        <a class="nav-link" href="https://github.com/snix10"> <i
+                                class="fab fa-github fa-2xl ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 p-4 ps-md-0 mt-0">
+                <div class="d-flex justify-content-center">
+                    <img id="imgCoba" src="asset/astronaut.png" class="floating" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SKILLS SPESIFIK -->
+    <div class="container">
+        <div class="card text-center rounded mx-3 bg-transparent border-0">
+            <div id="skillspesifik" class="card-body  ">
+                <h3 class="card-title">SKILLS</h3>
+                <p class="card-text"></p>
+                <div id="about" class="container ">
+                    <div id="cardskill" class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center">
+                        <div class="col">
+                            <div id="cardskillsp" class="card h-100 bg-transparent">
+                                <div class="card-body ">
+                                    <h5 class="card-title">Fullstack</h5>
+                                    <p class="card-text">Membuat dan mengembangkan web dari sisi backend maupun frontend
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="cardskillsp1" class="card h-100 bg-transparent">
+
+                                <div class="card-body ">
+                                    <h5 class="card-title">Rest Api</h5>
+                                    <p class="card-text">Membuat Rest Api
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="cardskillsp2" class="card h-100 bg-transparent">
+                                <div class="card-body">
+                                    <h5 class="card-title">Design</h5>
+                                    <p class="card-text">membuat desain untuk kebutuhan web.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="cardskillsp3" class="card h-100 bg-transparent">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Frontend</h5>
+                                    <p class="card-text">Membuat dan mengmebangkan frontend menarik dan responsive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SKILLS / LANGUAGE AND TOOLS -->
+    <div class="container">
+        <div class="d-flex justify-content-center row my-5">
+            <h3 class="text-center">LANGUAGE AND TOOLS</h3>
+            <div class="col text-center zoom">
+                <img src="asset/logo_html.png" class="floating" alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_css.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_js.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_php.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_laravel.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_vue_js.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_mysql.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_vscode.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/Bootstrap.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_gimp.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_ubuntu.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
+            <div class="col text-center zoom">
+                <img src="asset/logo_ubuntu.png" class="floating " alt="..." style="height: 100px;width: 100px;">
+            </div>
         </div>
 
-        <!-- <div class="col-md-6 p-4 ps-md-0 ">                                                                                                                                                                                                                                        
-            <div class="d-flex justify-content-center">
-                <img src="asset/myPicture.png" class="" alt="..."
-                    style="height: 200px; width: 200px; border-radius: 100%;">
-            </div>
-        </div> -->
 
-        
+        <!--Project And Portofolio-->
+        <h3 class="text-center mb-4 mt-5">PROJECT AND PORTOFOLIO</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div id="cards" class="card h-100 bg-transparent border-2">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="asset/portofolio.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cardporto" class="card-body bg-transparent">
+                        <h5 class="card-title text-center">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">........</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="cards1" class="card h-100 bg-transparent border-2">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cardporto1" class="card-body">
+                        <h5 class="card-title text-center">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">........</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="cards2" class="card h-100 bg-transparent border-2">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="asset/project.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cardporto2" class="card-body bg-transparent">
+                        <h5 class="card-title text-center">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">........</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <h4 class="text-center mb-5">Footer</h4>
+    </div>
+
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
+
+
     <script>
+
+
+        // navbar
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").classList.remove('show');
+            }
+            else {
+                document.getElementById("header").classList.add('show');
+            }
+            prevScrollpos = currentScrollPos;
+        }
 
         // text mengetik
         const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
 
-        const textArray = ["code snippets", "plugins", "scripts", "tutorials"];
+        const textArray = ["Saepulloh", "web developer", "fullstack", "backend", "frontend"];
         const typingDelay = 200;
         const erasingDelay = 100;
         const newTextDelay = 2000; // Delay between current and next text
@@ -102,24 +311,86 @@
         document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
             if (textArray.length) setTimeout(type, newTextDelay + 250);
         });
-    
 
-        // navbar
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("header").classList.remove('show');
+
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to apply theme
+            function applyTheme(theme) {
+                document.body.style.background = theme.background;
+                document.body.style.color = theme.color;
+                document.body.style.fontFamily = theme.fontFamily;
+
+                // Apply additional styles for specific elements if needed
+
+                document.getElementById('navstyle').style.borderColor = theme.color;
+                document.getElementById('imgCoba').src = theme.img;
+                document.getElementById('skillspesifik').style.color = theme.color;
+
+                document.getElementById('cardskillsp').style.color = theme.color;
+                document.getElementById('cardskillsp').style.borderColor = theme.color;
+                document.getElementById('cardskillsp1').style.color = theme.color;
+                document.getElementById('cardskillsp1').style.borderColor = theme.color;
+                document.getElementById('cardskillsp2').style.color = theme.color;
+                document.getElementById('cardskillsp2').style.borderColor = theme.color;
+                document.getElementById('cardskillsp3').style.color = theme.color;
+                document.getElementById('cardskillsp3').style.borderColor = theme.color;
+
+                document.getElementById('cards').style.color = theme.color;
+                document.getElementById('cards').style.borderColor = theme.color;
+                document.getElementById('cards1').style.color = theme.color;
+                document.getElementById('cards1').style.borderColor = theme.color;
+                document.getElementById('cards2').style.color = theme.color;
+                document.getElementById('cards2').style.borderColor = theme.color;
             }
-            else {
-                document.getElementById("header").classList.add('show');
+
+            // Theme data
+            const themes = {
+                temaspace: {
+                    background: 'whitesmoke',
+                    color: 'black',
+                    fontFamily: '"Anta", sans-serif',
+                    img: 'asset/astronaut.png'
+                },
+                temahalloween: {
+                    background: 'black',
+                    color: 'orange',
+                    fontFamily: '"Nosifer", sans-serif',
+                    img: 'asset/Halloween.png'
+                },
+                temapixel: {
+                    background: 'linear-gradient(to right, blue 50%, red 50%)',
+                    color: 'black',
+                    fontFamily: '"Press Start 2P", system-ui',
+                    img: 'asset/pixel_art_game.png'
+                },
+                temablackwhite: {
+                    background: 'linear-gradient(135deg, #333 50%, #666 50%)',
+                    color: 'whitesmoke',
+                    fontFamily: '"Eagle Lake", serif',
+                    img: 'asset/sayap.png'
+                }
+            };
+
+            // Function to change theme
+            window.changeTheme = function (themeName) {
+                const selectedTheme = themes[themeName];
+                applyTheme(selectedTheme);
+                localStorage.setItem('selectedTheme', themeName);
+            };
+
+            // Apply default theme
+            const selectedTheme = localStorage.getItem('selectedTheme');
+            if (selectedTheme) {
+                applyTheme(themes[selectedTheme]);
             }
-            prevScrollpos = currentScrollPos;
-        }
+        });
+
+
+
     </script>
-
 
 
 </body>
 
-</html>
+</html
